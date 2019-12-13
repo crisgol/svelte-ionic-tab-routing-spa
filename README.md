@@ -8,4 +8,6 @@ Issue is in IonTab.svelte. The onMount triggers too earlier for the controller t
 
 The ionic api docs state you can predefine as property to ion-tab-bar, but this does not seem to work.
 
-So need help.
+Update 13/12/2019: workaround: add ion-router (with no routes! as we don't want hash routes) to IonTab so at least the default tab is not shown as per ion-tabs.tsx (see https://github.com/ionic-team/ionic/issues/20060). No ugly UI, but bit hacky code to find when `present` is present. And we get ionic errors in console because of router issue.
+
+So besides workaround, I need a bit of help on svelte onMount wrt webcomponents.

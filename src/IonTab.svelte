@@ -26,6 +26,7 @@
   });
 </script>
 
+<ion-router />
 <ion-tabs>
   {#each tabs as tab}
     <ion-tab tab={tab.tab}>
