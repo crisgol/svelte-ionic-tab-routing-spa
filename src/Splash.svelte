@@ -2,7 +2,7 @@
   import { navigate } from "svelte-routing";
 
   setTimeout(() => {
-    navigate("/tabs/movies");
+    navigate("/intro");
   }, 2500);
 </script>
 

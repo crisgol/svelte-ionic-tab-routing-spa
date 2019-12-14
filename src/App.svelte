@@ -1,11 +1,17 @@
 <script>
   import { Router, Route } from "svelte-routing";
+
+  import IonMenu from "./components/IonMenu.svelte";
+
   import IonTab from "./IonTab.svelte";
   import Splash from "./Splash.svelte";
 
   import Music from "./Music.svelte";
   import Movies from "./Movies.svelte";
   import Games from "./Games.svelte";
+  import Introduction from "./pages/Introduction.svelte";
+  import Buttons from "./pages/Buttons.svelte";
+  import Cards from "./pages/Cards.svelte";
 
   export let url = "";
 
@@ -18,6 +24,12 @@
       tab: "games",
       component: Games
     }
+  ];
+
+  const routes = [
+    { path: "/buttons", component: Buttons },
+    { path: "/buttons/:id", component: Buttons },
+    { path: "/cards", component: Cards }
   ];
 </script>
 
@@ -33,10 +45,22 @@
 </svelte:head>
 
 <ion-app>
+  <IonMenu />
   <Router {url}>
+
+    {#each routes as route}
+      <Route path={route.path} let:params>
+        <svelte:component this={route.component} {params} />
+      </Route>
+    {/each}
+
     <Route path="/">
       <Splash />
     </Route>
+    <Route path="/intro">
+      <Introduction />
+    </Route>
+
     <Route path="/tabs">
       <IonTab tabs={myTabs} />
     </Route>
