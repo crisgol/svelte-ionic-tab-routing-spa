@@ -4,9 +4,8 @@
   export let tabs;
   export let selected;
 
+  // ugly implmentation
   let tries = 0;
-
-  // ugly implmentation, also for the user
   const selectTab = () => {
     const controller = document.querySelector("ion-tabs");
     if (controller.select) {
@@ -34,7 +33,7 @@
     </ion-tab>
   {/each}
 
-  <ion-tab-bar slot="bottom">
+  <ion-tab-bar slot="bottom" selectedTab={selected}>
     {#each tabs as tab}
       <ion-tab-button tab={tab.tab}>
         <ion-label>{tab.label}</ion-label>

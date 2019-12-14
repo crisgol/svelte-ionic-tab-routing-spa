@@ -3,7 +3,7 @@
 
   setTimeout(() => {
     navigate("/tabs/movies");
-  }, 5000);
+  }, 500);
 </script>
 
 <ion-content>

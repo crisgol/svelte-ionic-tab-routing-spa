@@ -45,3 +45,4 @@
     </Route>
   </Router>
 </ion-app>
+<ion-modal-controller />
