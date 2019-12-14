@@ -61,6 +61,7 @@
     { path: "/infinitescroll", component: Infinitescroll },
     { path: "/inputs", component: Inputs },
     { path: "/introduction", component: Introduction },
+    { path: "/slides", component: Introduction },
     { path: "/items", component: Items },
     { path: "/lists", component: Lists },
     { path: "/notes", component: Notes },
@@ -94,6 +95,7 @@
   ];
 </script>
 
+<!-- this div with main is needed for menu-controller -->
 <div class="ion-page" main>
   <Router {url}>
 

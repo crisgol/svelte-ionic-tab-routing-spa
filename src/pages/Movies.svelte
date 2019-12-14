@@ -14,6 +14,9 @@
 
 <ion-header translucent>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button />
+    </ion-buttons>
     <ion-title>Movies</ion-title>
   </ion-toolbar>
 </ion-header>

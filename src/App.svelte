@@ -20,4 +20,3 @@
 </ion-app>
 
 <ion-modal-controller />
-<ion-menu-controller />

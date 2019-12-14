@@ -1,12 +1,17 @@
 <script>
   import { navigate } from "svelte-routing";
 
+  export let side = "start";
+
+  let menucontroller;
+
   function closeAndNavigate(url) {
-    document.querySelector("ion-menu-controller").close();
+    menucontroller.close();
     navigate(url);
   }
 
   const menuItems = [
+    { url: "/tabs/music", label: "Tabs with perks", icon: "home" },
     { url: "/avatars", label: "Avatars", icon: "home" },
     { url: "/buttons", label: "Buttons", icon: "home" },
     { url: "/cards", label: "Cards", icon: "home" },
@@ -18,7 +23,6 @@
     { url: "/icons", label: "Icons", icon: "home" },
     { url: "/infinitescroll", label: "Infinitescroll", icon: "home" },
     { url: "/inputs", label: "Inputs", icon: "home" },
-    { url: "/introduction", label: "Introduction", icon: "home" },
     { url: "/items", label: "Items", icon: "home" },
     { url: "/lists", label: "Lists", icon: "home" },
     { url: "/notes", label: "Notes", icon: "home" },
@@ -31,6 +35,7 @@
     { url: "/segment", label: "Segment", icon: "home" },
     { url: "/select", label: "Select", icon: "home" },
     { url: "/skeleton", label: "Skeleton", icon: "home" },
+    { url: "/introduction", label: "Slides", icon: "home" },
     { url: "/spinner", label: "Spinner", icon: "home" },
     { url: "/text", label: "Text", icon: "home" },
     { url: "/thumbnails", label: "Thumbnails", icon: "home" },
@@ -39,7 +44,7 @@
   ];
 </script>
 
-<ion-menu side="start">
+<ion-menu {side}>
   <ion-header>
     <ion-toolbar translucent>
       <ion-title>Menu</ion-title>
@@ -47,7 +52,6 @@
   </ion-header>
   <ion-content>
     <ion-list>
-
       {#each menuItems as menuItem}
         <ion-item
           on:click={() => {
@@ -57,7 +61,8 @@
           <ion-label>{menuItem.label}</ion-label>
         </ion-item>
       {/each}
-
     </ion-list>
   </ion-content>
 </ion-menu>
+
+<ion-menu-controller bind:this={menucontroller} />
