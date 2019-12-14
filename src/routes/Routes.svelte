@@ -92,18 +92,20 @@
   ];
 </script>
 
-<Router {url}>
+<div class="ion-page" main>
+  <Router {url}>
 
-  {#each routes as route}
-    <Route path={route.path} let:params>
-      <svelte:component this={route.component} {params} />
+    {#each routes as route}
+      <Route path={route.path} let:params>
+        <svelte:component this={route.component} {params} />
+      </Route>
+    {/each}
+
+    <Route path="/tabs">
+      <IonTab tabs={myTabs} />
     </Route>
-  {/each}
-
-  <Route path="/tabs">
-    <IonTab tabs={myTabs} />
-  </Route>
-  <Route path="/tabs/:id" let:params>
-    <IonTab tabs={myTabs} selected={params.id} />
-  </Route>
-</Router>
+    <Route path="/tabs/:id" let:params>
+      <IonTab tabs={myTabs} selected={params.id} />
+    </Route>
+  </Router>
+</div>
