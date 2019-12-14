@@ -9,7 +9,7 @@
   import Splash from "./../pages/Splash.svelte";
 
   import Home from "./../pages/Home.svelte";
-  import DefaultTab from "./../pages/DefaultTab.svelte";
+  // import DefaultTab from "./../pages/DefaultTab.svelte";
 
   import Music from "./../pages/Music.svelte";
   import Movies from "./../pages/Movies.svelte";
