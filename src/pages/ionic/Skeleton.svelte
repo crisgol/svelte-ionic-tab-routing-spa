@@ -26,7 +26,7 @@
   <ion-toolbar>
     <ion-title>Skeleton Text</ion-title>
     <ion-buttons slot="primary">
-      <ion-button onClick="toggleSkeleton()">Toggle</ion-button>
+      <ion-button on:click={toggleSkeleton}>Toggle</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>

@@ -171,6 +171,7 @@
   onMount(() => {
     list = document.getElementById("list");
     infiniteScroll = document.getElementById("infinite-scroll");
+    console.log("list", list, infiniteScroll);
 
     infiniteScroll.addEventListener("ionInfinite", async function() {
       if (length < users.length) {
