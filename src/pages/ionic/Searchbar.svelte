@@ -1,13 +1,10 @@
 <script>
   import { onMount } from "svelte";
 
-  let searchbar;
   let items;
 
   onMount(() => {
-    searchbar = document.querySelector("ion-searchbar");
     items = Array.from(document.getElementById("cities").children);
-    searchbar.addEventListener("ionInput", handleInput);
   });
 
   function handleInput(event) {
@@ -27,7 +24,7 @@
     <ion-title>Searchbar</ion-title>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar />
+    <ion-searchbar on:ionInput={handleInput} />
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen>
