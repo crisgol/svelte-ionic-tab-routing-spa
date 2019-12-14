@@ -1,12 +1,21 @@
 <script>
-  const searchbar = document.querySelector("ion-searchbar");
-  const items = Array.from(document.querySelector("ion-list").children);
-  searchbar.addEventListener("ionInput", handleInput);
+  import { onMount } from "svelte";
+
+  let searchbar;
+  let items;
+
+  onMount(() => {
+    searchbar = document.querySelector("ion-searchbar");
+    items = Array.from(document.getElementById("cities").children);
+    searchbar.addEventListener("ionInput", handleInput);
+  });
+
   function handleInput(event) {
     const query = event.target.value.toLowerCase();
     requestAnimationFrame(() => {
       items.forEach(item => {
         const shouldShow = item.textContent.toLowerCase().indexOf(query) > -1;
+        console.log("Should show", item.textContent, shouldShow);
         item.style.display = shouldShow ? "block" : "none";
       });
     });
@@ -22,7 +31,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen>
-  <ion-list>
+  <ion-list id="cities">
     <ion-item>Amsterdam</ion-item>
     <ion-item>Bogota</ion-item>
     <ion-item>Buenos Aires</ion-item>

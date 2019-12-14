@@ -162,21 +162,28 @@
     }
   ];
 
-  let length = 0;
-  const list = document.getElementById("list");
-  const infiniteScroll = document.getElementById("infinite-scroll");
+  import { onMount } from "svelte";
 
-  infiniteScroll.addEventListener("ionInfinite", async function() {
-    if (length < users.length) {
-      console.log("Loading data...");
-      await wait(500);
-      infiniteScroll.complete();
-      appendItems(10);
-      console.log("Done");
-    } else {
-      console.log("No More Data");
-      infiniteScroll.disabled = true;
-    }
+  let length = 0;
+  let list;
+  let infiniteScroll;
+
+  onMount(() => {
+    list = document.getElementById("list");
+    infiniteScroll = document.getElementById("infinite-scroll");
+
+    infiniteScroll.addEventListener("ionInfinite", async function() {
+      if (length < users.length) {
+        console.log("Loading data...");
+        await wait(500);
+        infiniteScroll.complete();
+        appendItems(10);
+        console.log("Done");
+      } else {
+        console.log("No More Data");
+        infiniteScroll.disabled = true;
+      }
+    });
   });
 
   function appendItems(number) {
@@ -194,7 +201,7 @@
             <p>Created ${users[i + originalLength].created}</p>
           </ion-label>
         `;
-      list.appendChild(el);
+      // list.appendChild(el);
       length++;
     }
   }

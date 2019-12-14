@@ -12,7 +12,7 @@
   <ion-toolbar>
     <ion-title>Reorder</ion-title>
     <ion-buttons slot="primary">
-      <ion-button onclick="toggleReorder()">Toggle</ion-button>
+      <ion-button on:click={toggleReorder}>Toggle</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>

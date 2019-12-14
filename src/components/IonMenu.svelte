@@ -6,7 +6,37 @@
     navigate(url);
   }
 
-  const menuItems = [{ icon: "home", label: "Cards", url: "/cards" }];
+  const menuItems = [
+    { url: "/avatars", label: "Avatars", icon: "home" },
+    { url: "/buttons", label: "Buttons", icon: "home" },
+    { url: "/cards", label: "Cards", icon: "home" },
+    { url: "/checkboxes", label: "Checkboxes", icon: "home" },
+    { url: "/chips", label: "Chips", icon: "home" },
+    { url: "/datetime", label: "Datetime", icon: "home" },
+    { url: "/fabs", label: "Fabs", icon: "home" },
+    { url: "/grid", label: "Grid", icon: "home" },
+    { url: "/icons", label: "Icons", icon: "home" },
+    { url: "/infinitescroll", label: "Infinitescroll", icon: "home" },
+    { url: "/inputs", label: "Inputs", icon: "home" },
+    { url: "/introduction", label: "Introduction", icon: "home" },
+    { url: "/items", label: "Items", icon: "home" },
+    { url: "/lists", label: "Lists", icon: "home" },
+    { url: "/notes", label: "Notes", icon: "home" },
+    { url: "/progressbar", label: "ProgressBar", icon: "home" },
+    { url: "/radios", label: "Radios", icon: "home" },
+    { url: "/range", label: "Range", icon: "home" },
+    { url: "/refresher", label: "Refresher", icon: "home" },
+    { url: "/reorder", label: "Reorder", icon: "home" },
+    { url: "/searchbar", label: "Searchbar", icon: "home" },
+    { url: "/segment", label: "Segment", icon: "home" },
+    { url: "/select", label: "Select", icon: "home" },
+    { url: "/skeleton", label: "Skeleton", icon: "home" },
+    { url: "/spinner", label: "Spinner", icon: "home" },
+    { url: "/text", label: "Text", icon: "home" },
+    { url: "/thumbnails", label: "Thumbnails", icon: "home" },
+    { url: "/toggle", label: "Toggle", icon: "home" },
+    { url: "/toolbar", label: "Toolbar", icon: "home" }
+  ];
 </script>
 
 <ion-menu side="start">
@@ -28,34 +58,6 @@
         </ion-item>
       {/each}
 
-      <ion-item
-        on:click={() => {
-          closeAndNavigate('/ss');
-        }}>
-        <ion-icon name="home" slot="start" />
-        <ion-label>Home</ion-label>
-      </ion-item>
-      <ion-item
-        on:click={() => {
-          closeAndNavigate('/ss');
-        }}>
-        <ion-icon name="person" slot="start" />
-        <ion-label>Profile</ion-label>
-      </ion-item>
-      <ion-item
-        on:click={() => {
-          closeAndNavigate('/ss');
-        }}>
-        <ion-icon name="chatbubbles" slot="start" />
-        <ion-label>Messages</ion-label>
-      </ion-item>
-      <ion-item
-        on:click={() => {
-          closeAndNavigate('/ss');
-        }}>
-        <ion-icon name="settings" slot="start" />
-        <ion-label>Settings</ion-label>
-      </ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
