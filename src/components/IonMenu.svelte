@@ -6,10 +6,9 @@
     navigate(url);
   }
 
-  const menuItems = [{ icon: "home", label: "Home2", url: "/start" }];
+  const menuItems = [{ icon: "home", label: "Cards", url: "/cards" }];
 </script>
 
-<ion-menu-controller />
 <ion-menu side="start">
   <ion-header>
     <ion-toolbar translucent>
@@ -25,7 +24,7 @@
             closeAndNavigate(menuItem.url);
           }}>
           <ion-icon name={menuItem.icon} slot="start" />
-          <ion-label>menuItem.label</ion-label>
+          <ion-label>{menuItem.label}</ion-label>
         </ion-item>
       {/each}
 
