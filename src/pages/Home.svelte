@@ -14,5 +14,6 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
+  sadsa
   <ion-button expand="block" on:click={openMenu}>Open Menu</ion-button>
 </ion-content>

@@ -7,6 +7,9 @@
 
 <ion-header translucent>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button />
+    </ion-buttons>
     <ion-title>Chip</ion-title>
   </ion-toolbar>
 </ion-header>

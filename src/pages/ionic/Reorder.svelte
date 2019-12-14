@@ -10,6 +10,9 @@
 
 <ion-header translucent>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button />
+    </ion-buttons>
     <ion-title>Reorder</ion-title>
     <ion-buttons slot="primary">
       <ion-button on:click={toggleReorder}>Toggle</ion-button>

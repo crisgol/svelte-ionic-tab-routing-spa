@@ -77,7 +77,9 @@
     { path: "/text", component: Text },
     { path: "/thumbnails", component: Thumbnails },
     { path: "/toggle", component: Toggle },
-    { path: "/toolbar", component: Toolbar }
+    { path: "/toolbar", component: Toolbar },
+
+    { path: "/home", component: Home }
   ];
 
   const myTabs = [
