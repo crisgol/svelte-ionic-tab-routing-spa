@@ -49,7 +49,7 @@
   const routes = [
     { path: "/", component: Splash },
     { path: "/intro", component: Introduction },
-    { path: "/tabalt", component: DefaultTab },
+    //  { path: "/tabalt", component: DefaultTab },
     { path: "/avatars", component: Avatars },
     { path: "/buttons", component: Buttons },
     { path: "/cards", component: Cards },
