@@ -16,8 +16,13 @@
   import Movies from "./../pages/Movies.svelte";
   import Games from "./../pages/Games.svelte";
 
+  import Avatars from "./../pages/ionic/Avatars.svelte";
   import Buttons from "./../pages/ionic/Buttons.svelte";
   import Cards from "./../pages/ionic/Cards.svelte";
+  import Checkboxes from "./../pages/ionic/Checkboxes.svelte";
+  import Chips from "./../pages/ionic/Chips.svelte";
+  import Datetime from "./../pages/ionic/Datetime.svelte";
+  import Fabs from "./../pages/ionic/Fabs.svelte";
 
   const routes = [
     { path: "/", component: Splash },
