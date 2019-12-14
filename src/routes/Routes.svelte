@@ -29,6 +29,7 @@
   import Introduction from "./../pages/ionic/Introduction.svelte";
   import Items from "./../pages/ionic/Items.svelte";
   import Lists from "./../pages/ionic/Lists.svelte";
+  import Nav from "./../pages/ionic/Nav.svelte";
   import Notes from "./../pages/ionic/Notes.svelte";
   import ProgressBar from "./../pages/ionic/ProgressBar.svelte";
   import Radios from "./../pages/ionic/Radios.svelte";
@@ -79,6 +80,8 @@
     { path: "/thumbnails", component: Thumbnails },
     { path: "/toggle", component: Toggle },
     { path: "/toolbar", component: Toolbar },
+
+    { path: "/nav", component: Nav },
 
     { path: "/home", component: Home }
   ];

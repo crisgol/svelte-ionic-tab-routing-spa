@@ -1,2 +1,14 @@
+<script>
+  import { register } from "svelte-custom-elements";
+  import NavHome from "./NavHome.svelte";
+
+  const isRegistered = function(name) {
+    return document.createElement(name).constructor !== HTMLElement;
+  };
+
+  if (!isRegistered("nav-home")) {
+    register("nav-home", NavHome, []);
+  }
+</script>
+
 <ion-nav root="nav-home" />
-https://svelte.dev/repl/07f7bf3a3cae41e797f10b5f7daf76c1?version=3.16.4

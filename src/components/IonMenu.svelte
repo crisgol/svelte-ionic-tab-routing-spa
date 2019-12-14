@@ -25,6 +25,7 @@
     { url: "/inputs", label: "Inputs", icon: "home" },
     { url: "/items", label: "Items", icon: "home" },
     { url: "/lists", label: "Lists", icon: "home" },
+    { url: "/nav", label: "Nav", icon: "home" },
     { url: "/notes", label: "Notes", icon: "home" },
     { url: "/progressbar", label: "ProgressBar", icon: "home" },
     { url: "/radios", label: "Radios", icon: "home" },
