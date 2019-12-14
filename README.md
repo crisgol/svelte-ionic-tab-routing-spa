@@ -2,7 +2,7 @@
 
 Try out to get svelte-routing integrated with ionic tabs in svelte.
 
-To run this, you need to run `npm run dev` alongside `npm run devspa` in two separate terminals. Maybe hacky, but at least it works.
+To run this, you need to run `npm run dev`. Routing (deeplinking) through the SPA will be served through localhost:8080 (not :5000)
 
 Issue is in IonTab.svelte. The onMount triggers too earlier for the controller to be able to expose the `present` method for programmatically setting the tab selected by default.
 

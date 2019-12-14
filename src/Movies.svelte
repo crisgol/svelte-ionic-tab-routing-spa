@@ -14,7 +14,7 @@
 
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>Movies</ion-title>
+    <ion-title>Movies2</ion-title>
   </ion-toolbar>
 </ion-header>
 
