@@ -1,6 +1,6 @@
 <script>
   import Extra from "./Extra.svelte";
-  import { IonicShowModal } from "./services/IonicControllers";
+  import { IonicShowModal } from "./../services/IonicControllers";
 
   const showModal = () => {
     IonicShowModal("modal-extra", Extra, {

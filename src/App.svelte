@@ -1,14 +1,6 @@
 <script>
   import IonMenu from "./components/IonMenu.svelte";
-
-  import { Routes } from "./routes/Routes.svelte";
-
-  const routes = [
-    { path: "/buttons", component: Buttons },
-    { path: "/buttons/:id", component: Buttons },
-    { path: "/cards", component: Cards },
-    { path: "/home", component: Home }
-  ];
+  import Routes from "./routes/Routes.svelte";
 </script>
 
 <svelte:head>
@@ -25,7 +17,6 @@
 <ion-app>
   <IonMenu />
   <Routes />
-
 </ion-app>
 
 <ion-modal-controller />

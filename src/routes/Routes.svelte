@@ -1,26 +1,32 @@
 <script>
   import { Router, Route } from "svelte-routing";
 
-  import IonTab from "./components/IonTab.svelte";
-
-  import Splash from "./Splash.svelte";
+  import IonTab from "./../components/IonTab.svelte";
 
   export let url = "";
 
   // import * as sss from "./Music.svelte";  https://github.com/sveltejs/sapper/issues/288 TODO
-  import Music from "./Music.svelte";
-  import Movies from "./Movies.svelte";
-  import Games from "./Games.svelte";
-  import Introduction from "./pages/Introduction.svelte";
-  import Buttons from "./../pages/Buttons.svelte";
-  import Cards from "./pages/Cards.svelte";
-  import Home from "./pages/Home.svelte";
+  import Splash from "./../pages/Splash.svelte";
+  import Introduction from "./../pages/ionic/Introduction.svelte";
+
+  import Home from "./../pages/Home.svelte";
+  import DefaultTab from "./../pages/DefaultTab.svelte";
+
+  import Music from "./../pages/Music.svelte";
+  import Movies from "./../pages/Movies.svelte";
+  import Games from "./../pages/Games.svelte";
+
+  import Buttons from "./../pages/ionic/Buttons.svelte";
+  import Cards from "./../pages/ionic/Cards.svelte";
 
   const routes = [
+    { path: "/", component: Splash },
     { path: "/buttons", component: Buttons },
     { path: "/buttons/:id", component: Buttons },
     { path: "/cards", component: Cards },
-    { path: "/home", component: Home }
+    { path: "/home", component: Home },
+    { path: "/intro", component: Introduction },
+    { path: "/tabalt", component: DefaultTab }
   ];
 
   const myTabs = [
@@ -42,13 +48,6 @@
       <svelte:component this={route.component} {params} />
     </Route>
   {/each}
-
-  <Route path="/">
-    <Splash />
-  </Route>
-  <Route path="/intro">
-    <Introduction />
-  </Route>
 
   <Route path="/tabs">
     <IonTab tabs={myTabs} />
