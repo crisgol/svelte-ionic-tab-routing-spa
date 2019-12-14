@@ -33,3 +33,4 @@ A number of todo's:
 - ion-img?
 - make it a PWA
 - publish on firebase hosting
+- try some cordova/ionic native
