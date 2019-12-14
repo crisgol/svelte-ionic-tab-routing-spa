@@ -1,5 +1,5 @@
 <script>
-  const refresher = document.getElementById("refresher");
+  import { onMount } from "svelte";
   const names = [
     "Burt Bear",
     "Charlie Cheetah",
@@ -15,31 +15,46 @@
     "Rachel Rabbit",
     "Ted Turtle"
   ];
-  refresher.addEventListener("ionRefresh", () => {
-    setTimeout(() => {
-      prependMessages(5, true);
-      refresher.complete();
-    }, 2000);
+
+  let list;
+  let refresher;
+
+  onMount(() => {
+    refresher = document.getElementById("refresher");
+
+    refresher.addEventListener("ionRefresh", () => {
+      console.log("Refresh action");
+      setTimeout(() => {
+        prependMessages(5, true);
+        refresher.complete();
+      }, 2000);
+    });
+    list = document.getElementById("items");
+    appendMessages(5);
   });
-  const list = document.querySelector("ion-list");
-  appendMessages(5);
+
   function chooseRandomName() {
     return names[Math.floor(Math.random() * names.length)];
   }
   function appendMessages(numMessages = 1, unread) {
     for (let i = 0; i < numMessages; i++) {
-      list.appendChild(createMessage(unread));
+      console.log("stuff added", createMessage(unread));
+      list.appendChild(createMessage(unread, i));
     }
   }
   function prependMessages(numMessages = 1, unread) {
     for (let i = 0; i < numMessages; i++) {
-      list.insertBefore(createMessage(unread), list.firstChild);
+      list.insertBefore(createMessage(unread, i), list.firstChild);
     }
   }
-  function createMessage(unread = false) {
+  function createMessage(unread = false, i = 1) {
     let item = document.createElement("ion-item");
+    const ran = i;
     item.innerHTML = `
         <div slot="start" class="${unread ? "unread" : "read"}"></div>
+        <ion-avatar slot="start">
+            <img src="https://www.gravatar.com/avatar/${ran}?d=monsterid&f=y">
+          </ion-avatar>
         <ion-label class="ion-text-wrap">
           <h2>${chooseRandomName()}</h2>
           <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
@@ -79,7 +94,7 @@
 
 <ion-header translucent>
   <ion-toolbar>
-    <ion-title>Refresher</ion-title>
+    <ion-title>Pull to refresh</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -88,5 +103,5 @@
     <ion-refresher-content />
   </ion-refresher>
 
-  <ion-list />
+  <ion-list id="items" />
 </ion-content>
