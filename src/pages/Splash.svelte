@@ -7,7 +7,7 @@
 
   setTimeout(() => {
     navigate("/intro");
-  }, 1500);
+  }, 3500);
 
   console.log("STORA", localforage);
 
