@@ -56,3 +56,17 @@ export const IonicShowLoading = (options) => {
         .then(loading =>loading.present());
 };
 
+export const IonicShowPicker = (options) => {
+    const controller = registerDOMOnce("ion-picker-controller"); 
+    return controller
+        .create(options)
+        .then(picker =>picker.present());
+};
+
+export const IonicShowAlert = (options) => {
+    const controller = registerDOMOnce("ion-alert-controller"); 
+    return controller
+        .create(options)
+        .then(alert =>alert.present());
+};
+

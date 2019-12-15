@@ -18,6 +18,5 @@
 <ion-app>
   <IonMenu />
   <Routes />
+  <ion-nav />
 </ion-app>
-
-<ion-modal-controller />

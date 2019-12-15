@@ -10,5 +10,3 @@
     register("nav-home", NavHome, []);
   }
 </script>
-
-<ion-nav root="nav-home" />

@@ -45,6 +45,8 @@ A number of todo's:
 - virtual scroll??
 - ion-img?
 - make it a PWA
+- better names for controller API?
+- NAV over tab?
 - make it more sveltish (code, store, bindings, animations)
 - publish on firebase hosting
 - try some cordova/ionic native
