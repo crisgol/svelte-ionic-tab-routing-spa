@@ -51,3 +51,4 @@ A number of todo's:
 - publish on firebase hosting
 - try some cordova/ionic native
 - singleton classes https://alligator.io/js/js-singletons/
+- place routes in better place (pages folder probably, to avoid repeating /../)

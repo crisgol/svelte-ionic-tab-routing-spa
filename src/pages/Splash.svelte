@@ -11,9 +11,9 @@
 
   console.log("STORA", localforage);
 
-  Plugins.Geolocation.getCurrentPosition().then(position => {
-    console.log("POS", position);
-  });
+  //  Plugins.Geolocation.getCurrentPosition().then(position => {
+  //    console.log("POS", position);
+  //  });
 
   Plugins.Share.share({
     title: "See cool stuff",
