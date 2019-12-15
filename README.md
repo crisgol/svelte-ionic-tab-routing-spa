@@ -3,6 +3,8 @@ Try out to get svelte-routing integrated with ionic tabs in svelte.
 
 To run this, you need to run `npm run dev`. Routing (deeplinking) through the SPA will be served through localhost:8080 (not :5000)
 
+Also published as web app: https://ionicsvelte.firebaseapp.com
+
 Features (vision/realised) 
 - All Ionic Framework UI components (80% done)
 - Run as SPA (100% done)
