@@ -11,10 +11,19 @@ export const registerOnce = (selector, component) => {
     }
 };
 
+const registerDOMOnce=(selector)=> {
+    let controller = document.querySelector(selector);
+    if (!controller) {
+        controller=document.createElement(selector);
+        document.body.appendChild(controller);
+    }
+    return controller;
+}
+
+// not exposing other methods nor events
 export const IonicShowModal = (selector, component, componentProps) => {
-    //    const selector = 'modal-' + Date.now();
+    const controller = registerDOMOnce("ion-modal-controller");
     registerOnce(selector, component);
-    const controller = document.querySelector("ion-modal-controller");
     return controller
         .create({
             component: selector,
@@ -22,6 +31,28 @@ export const IonicShowModal = (selector, component, componentProps) => {
         })
         .then(modal => {
             modal.present();
-            return modal.onWillDismiss() // not exposing other methods nor events
+            return modal.onWillDismiss() 
         });
 };
+
+export const IonicShowPopover = (event,selector, component, componentProps) => {
+    registerOnce(selector, component);
+    const controller = registerDOMOnce("ion-popover-controller"); 
+    return controller
+        .create({
+            component: selector,
+            componentProps
+        })
+        .then(popover => {
+            popover.present();
+            return popover.onWillDismiss() 
+        });
+};
+
+export const IonicShowLoading = (options) => {
+    const controller = registerDOMOnce("ion-loading-controller"); 
+    return controller
+        .create(options)
+        .then(loading =>loading.present());
+};
+

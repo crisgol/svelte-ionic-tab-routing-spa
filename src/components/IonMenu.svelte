@@ -1,5 +1,6 @@
 <script>
   import { navigate } from "svelte-routing";
+  import { fly } from "svelte/transition";
 
   export let side = "start";
 
@@ -45,7 +46,7 @@
   ];
 </script>
 
-<ion-menu {side}>
+<ion-menu {side} in:fly={{ y: 200, duration: 2750 }}>
   <ion-header>
     <ion-toolbar translucent>
       <ion-title>Menu</ion-title>
