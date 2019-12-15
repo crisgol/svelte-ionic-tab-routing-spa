@@ -3,6 +3,16 @@ Try out to get svelte-routing integrated with ionic tabs in svelte.
 
 To run this, you need to run `npm run dev`. Routing (deeplinking) through the SPA will be served through localhost:8080 (not :5000)
 
+Features (vision/realised) 
+- All Ionic Framework UI components (80% done)
+- Run as SPA (100% done)
+- Service Worker setup via workbox (0%) 
+- PWA compliance via Ligthouse score (0%))
+- Stores/RXJS (0%)
+- Localstorage via localforage (50%)
+- Firebase SDK (0%)
+- Capacitor for mobile native support (25%)
+
 # Known issues
 
 ## IonTab present not ready onMount
@@ -20,17 +30,22 @@ Need to use other api
 ## IonNav no navigation and ion-back-button does not show
 There is much going on in the IonNav
 
-## Todo's
+## Fly in has a jitter
+Splash screen image has a jitter
+
+# Todo's
 A number of todo's:
 - add the popoover and other controller related items
-- try the css styling as per documentation
-- try capacitor or storage 
-- make nicer readme
+- try the css styling as per documentation (theming)
+- look at awesome rollup and add typescript
+- fix rollup copy of files in assets folder
 - do some binding on inputs and other interactive elements
-- ionicons for menu
+- ionicons for menu - colors and other names
 - ionicons part has some unknown icons, make larger
 - virtual scroll??
 - ion-img?
 - make it a PWA
+- make it more sveltish (code, store, bindings, animations)
 - publish on firebase hosting
 - try some cordova/ionic native
+- singleton classes https://alligator.io/js/js-singletons/

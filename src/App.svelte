@@ -1,6 +1,7 @@
 <script>
   import IonMenu from "./components/IonMenu.svelte";
   import Routes from "./routes/Routes.svelte";
+  import { Capacitor } from "@capacitor/core";
 </script>
 
 <svelte:head>
