@@ -18,5 +18,5 @@
 <ion-app>
   <IonMenu />
   <Routes />
-  <ion-nav />
+
 </ion-app>
